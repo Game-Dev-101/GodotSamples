@@ -1,0 +1,58 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Control
+
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = \"text\"
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
+
+
+func _on_Button_pressed():
+	get_tree().change_scene(\"res://Tween/Tween.tscn\")
+	pass # Replace with function body.
+"
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 38.0
+margin_top = 53.0
+margin_right = 176.0
+margin_bottom = 67.0
+text = "Godot Quick Samples"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer" type="GridContainer" parent="."]
+margin_left = 41.0
+margin_top = 84.0
+margin_right = 94.0
+margin_bottom = 104.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="GridContainer"]
+margin_right = 53.0
+margin_bottom = 20.0
+text = "Tween"
+[connection signal="pressed" from="GridContainer/Button" to="." method="_on_Button_pressed"]
