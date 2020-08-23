@@ -1,5 +1,5 @@
-Usage instruction:
+Cara pemakaian:
 
-Open the project, then just press F5 to test it.
+Buka file project.godot, tekan F5 untuk test.
 
-Project made using Godot 3.2.1, Godot 3.1 compatible
+Projek ini dibuat menggunakan Godot 3.2.1, kompatibel dengan Godot 3.1
