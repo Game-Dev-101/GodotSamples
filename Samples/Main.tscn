@@ -22,6 +22,11 @@ func _ready():
 func _on_Button_pressed():
 	get_tree().change_scene(\"res://Tween/Tween.tscn\")
 	pass # Replace with function body.
+
+
+func _on_Button2_pressed():
+	get_tree().change_scene(\"res://AnimationPlayer/AnimationPlayer.tscn\")
+	pass # Replace with function body.
 "
 
 [node name="Control" type="Control"]
@@ -52,7 +57,14 @@ __meta__ = {
 }
 
 [node name="Button" type="Button" parent="GridContainer"]
-margin_right = 53.0
+margin_right = 121.0
 margin_bottom = 20.0
 text = "Tween"
+
+[node name="Button2" type="Button" parent="GridContainer"]
+margin_top = 24.0
+margin_right = 121.0
+margin_bottom = 44.0
+text = "Animation Player"
 [connection signal="pressed" from="GridContainer/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="GridContainer/Button2" to="." method="_on_Button2_pressed"]
